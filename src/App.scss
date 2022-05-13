@@ -1,0 +1,18 @@
+.App-light {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  color: black !important;
+  -webkit-transition: background-color 340ms linear;
+  -ms-transition: background-color 340ms linear;
+  transition: background-color 340ms linear;
+}
+.App-dark {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: white !important;
+  -webkit-transition: background-color 340ms linear;
+  -ms-transition: background-color 340ms linear;
+  transition: background-color 340ms linear;
+}

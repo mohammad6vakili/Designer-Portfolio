@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import { Button } from "antd";
+import { useSelector, useDispatch } from "react-redux";
+import { setTheme } from "./Store/Actions/AppAction";
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  const theme: any = useSelector((state: any) => state.Reducer.theme);
+  const toggleTheme = () => {
+    if (theme === "light") {
+      dispatch(setTheme("dark"));
+    } else {
+      dispatch(setTheme("light"));
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={theme === "light" ? "App-light" : "App-dark"}>
+      <span onClick={toggleTheme}>{theme}</span>
     </div>
   );
-}
+};
 
 export default App;
