@@ -1,5 +1,20 @@
+@font-face {
+    font-family: wsnlsplaziuyxsllx;
+    src: url(./Assets/Font/IRANSansWeb_Medium.ttf);
+  }
 *{
     padding: 0;
     margin: 0;
+    font-family: wsnlsplaziuyxsllx;
     box-sizing: border-box;
 }
+.ant-btn{
+  background-color: transparent !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+}
+$color_bg:#1A1A40;
+$color_primary:#270082;
+$color_secondary:#7A0BC0;
+$color_tertiary:#FA58B6;
