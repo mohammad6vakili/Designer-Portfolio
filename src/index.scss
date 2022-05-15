@@ -14,6 +14,21 @@
   display: flex !important;
   align-items: center !important;
 }
+.ant-modal-footer,
+.ant-modal-close-x,
+  .ant-modal-title{
+  display: none !important;
+}
+.ant-modal-body{
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  background-color: transparent !important;
+}
+.ant-modal-content{
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
 $color_bg:#1A1A40;
 $color_primary:#270082;
 $color_secondary:#7A0BC0;

@@ -1,4 +1,4 @@
-@use 'index';
+@use "index";
 .App {
   width: 100%;
   height: 100vh;
@@ -11,14 +11,71 @@
 .App-light {
   background: rgba(255, 255, 255, 0.8);
   color: black !important;
-  a,a:hover{
+  a,
+  a:hover {
     color: black !important;
   }
 }
 .App-dark {
   background: index.$color_bg;
   color: white !important;
-  a,a:hover{
+  a,
+  a:hover {
     color: white !important;
+  }
+}
+.mv-modal {
+  background-color: index.$color_bg;
+  border: 1px solid white;
+  width: 300px;
+  min-height: 300px;
+  padding: 15px !important;
+  color: white !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px -4px rgba(255, 255, 255, 0.12),
+    0 6px 16px 0 rgba(255, 255, 255, 0.08),
+    0 9px 28px 8px rgba(255, 255, 255, 0.05);
+  > .mv-modal-close-button {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  > div:nth-child(1) {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  a {
+    width: 100%;
+    height: 50px !important;
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+    position: relative;
+    border-radius: 10px !important;
+    border: 1px solid white !important;
+    &:hover {
+      background: white !important;
+      color: index.$color_bg !important;
+      transition-duration: 0.5s;
+      transition: background 0.5s;
+      svg {
+        fill: index.$color_bg !important;
+      }
+    }
+    svg {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      fill: white;
+      left: 15px;
+    }
   }
 }
