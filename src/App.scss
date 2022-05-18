@@ -3,10 +3,25 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  @include index.flexCenter;
   padding: 100px 40px 0 40px;
+  overflow-y: auto;
   -webkit-transition: background-color 340ms linear;
   -ms-transition: background-color 340ms linear;
   transition: background-color 340ms linear;
+  >span:last-child{
+    position:absolute;
+    left: 40px;
+    bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    @include index.flexCenter;
+    >svg{
+      width:20px;
+      height: 20px;
+      margin-right: 5px;
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
 }
 .App-light {
   background: rgba(255, 255, 255, 0.8);
@@ -14,6 +29,12 @@
   a,
   a:hover {
     color: black !important;
+  }
+  >span:last-child{
+    color: rgba(0, 0, 0, 0.5) !important;
+    >svg{
+      fill: rgba(0, 0, 0, 0.5);
+    }
   }
 }
 .App-dark {
@@ -24,17 +45,16 @@
     color: white !important;
   }
 }
+// contact modal-------------------------------------
 .mv-modal {
+  @include index.flexColumnCenter;
   background-color: index.$color_bg;
   border: 1px solid white;
-  width: 300px;
-  min-height: 300px;
+  width: 380px;
+  min-height: 320px;
   padding: 15px !important;
   color: white !important;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-radius: 10px;
   box-shadow: 0 3px 6px -4px rgba(255, 255, 255, 0.12),
     0 6px 16px 0 rgba(255, 255, 255, 0.08),
@@ -51,13 +71,11 @@
     margin-bottom: 50px;
   }
   a {
+    @include index.flexCenter;
     width: 100%;
     height: 50px !important;
     color: white !important;
-    display: flex;
-    justify-content: center;
     margin-bottom: 20px;
-    align-items: center;
     position: relative;
     border-radius: 10px !important;
     border: 1px solid white !important;
@@ -76,6 +94,29 @@
       height: 25px;
       fill: white;
       left: 15px;
+    }
+  }
+}
+
+.mv-modal-light {
+  background-color: white;
+  border: 1px solid index.$color_bg;
+  color: index.$color_bg !important;
+  box-shadow: 0 3px 6px -4px rgba(255, 255, 255, 0.12),
+    0 6px 16px 0 rgba(255, 255, 255, 0.08),
+    0 9px 28px 8px rgba(255, 255, 255, 0.05);
+  a {
+    color: index.$color_bg !important;
+    border: 1px solid index.$color_bg !important;
+    &:hover {
+      background: index.$color_bg !important;
+      color: white !important;
+      svg {
+        fill: white !important;
+      }
+    }
+    svg {
+      fill: index.$color_bg;
     }
   }
 }

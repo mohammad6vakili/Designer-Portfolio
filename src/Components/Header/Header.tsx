@@ -46,7 +46,12 @@ const Header = () => {
         <Link to="/about">About</Link>
         <a onClick={() => setContactModal(true)}>Contact</a>
       </div>
-      <Button className="header-theme-changer" onClick={toggleTheme}>
+      <Button
+        className={`header-theme-changer ${
+          theme === "light" ? "header-theme-changer-light" : ""
+        }`}
+        onClick={toggleTheme}
+      >
         {theme === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
       </Button>
       <Modal visible={contactModal} onCancel={() => setContactModal(false)}>
@@ -54,23 +59,39 @@ const Header = () => {
           className={`mv-modal ${theme === "light" ? "mv-modal-light" : ""}`}
         >
           <div>Contact With Me</div>
-          <a>
+          <a
+            data-target="tooltip"
+            title="parisa6derakhshan@gmail.com"
+            href="mailto:parisa6derakhshan@gmail.com"
+            target={"_blank"}
+          >
             <span>Email</span>
             <EmailIcon />
           </a>
           <a
-            onClick={() =>
-              window.location.replace("www.linkedin.com/in/parisaderakhshan")
-            }
+            data-target="tooltip"
+            title="https://linkedin.com/in/parisaderakhshan"
+            href="https://linkedin.com/in/parisaderakhshan"
+            target={"_blank"}
           >
             <span>Linkedin</span>
             <LinkedinIcon />
           </a>
-          <a>
+          <a
+            data-target="tooltip"
+            title="https://pin.it/5GdXFF3"
+            href="https://pin.it/5GdXFF3"
+            target={"_blank"}
+          >
             <span>Pinterest</span>
             <PinterestIcon />
           </a>
-          <span className="mv-modal-close-button">×</span>
+          <span
+            onClick={() => setContactModal(false)}
+            className="mv-modal-close-button"
+          >
+            ×
+          </span>
         </div>
       </Modal>
     </header>

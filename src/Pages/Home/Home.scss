@@ -1,0 +1,46 @@
+@use "/src/index.scss";
+.home {
+  width: 100%;
+  padding-bottom: 20px;
+  @include index.flexCenter;
+  > div {
+    width: 50%;
+    > img {
+      width: 85%;
+    }
+  }
+  > div:nth-child(1) {
+    @include index.flexColumnCenter;
+    align-items: flex-start !important;
+    > div:nth-child(1) {
+      font-size: 52px;
+    }
+    > div:nth-child(2) {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    > div:nth-child(3) {
+      @include index.flexCenter;
+    }
+    > div:nth-child(3) > span {
+      margin-right: 20px;
+      font-weight: 100;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    > div {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.home-light {
+  > div:nth-child(1) {
+    > div:nth-child(2) {
+      color: rgba(0, 0, 0, 0.8);
+    }
+    > div:nth-child(3) > span {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
