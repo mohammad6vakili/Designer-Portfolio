@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { setTheme } from "../../Store/Actions/AppAction";
 import { Button, Modal } from "antd";
 import { ReactComponent as LightModeIcon } from "../../Assets/Images/light.svg";
@@ -14,6 +14,7 @@ import Logo from "../../Assets/Images/Logo.png";
 
 const Header = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
   const [contactModal, setContactModal] = useState<boolean>(false);
   const theme: string = useSelector((state: any) => state.Reducer.theme);
   const toggleTheme = () => {
@@ -40,10 +41,66 @@ const Header = () => {
           theme === "light" ? "header-links-light" : ""
         }`}
       >
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/cv">CV</Link>
-        <Link to="/about">About</Link>
+        <Link
+          className={
+            location.pathname === "/" && theme === "dark"
+              ? "header-link-active"
+              : ""
+          }
+          id={
+            location.pathname === "/" && theme === "light"
+              ? "header-link-active-light"
+              : ""
+          }
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className={
+            location.pathname === "/projects" && theme === "dark"
+              ? "header-link-active"
+              : ""
+          }
+          id={
+            location.pathname === "/projects" && theme === "light"
+              ? "header-link-active-light"
+              : ""
+          }
+          to="/projects"
+        >
+          Projects
+        </Link>
+        <Link
+          className={
+            location.pathname === "/skills" && theme === "dark"
+              ? "header-link-active"
+              : ""
+          }
+          id={
+            location.pathname === "/skills" && theme === "light"
+              ? "header-link-active-light"
+              : ""
+          }
+          to="/skills"
+        >
+          Skills
+        </Link>
+        <Link
+          className={
+            location.pathname === "/about" && theme === "dark"
+              ? "header-link-active"
+              : ""
+          }
+          id={
+            location.pathname === "/about" && theme === "light"
+              ? "header-link-active-light"
+              : ""
+          }
+          to="/about"
+        >
+          About
+        </Link>
         <a onClick={() => setContactModal(true)}>Contact</a>
       </div>
       <Button

@@ -9,17 +9,17 @@
   -webkit-transition: background-color 340ms linear;
   -ms-transition: background-color 340ms linear;
   transition: background-color 340ms linear;
-  >span:last-child{
-    position:absolute;
+  > span:last-child {
+    position: absolute;
     left: 40px;
     bottom: 10px;
-    color: rgba(255, 255, 255, 0.5);
+    color: index.$color_white_50;
     @include index.flexCenter;
-    >svg{
-      width:20px;
+    > svg {
+      width: 20px;
       height: 20px;
       margin-right: 5px;
-      fill: rgba(255, 255, 255, 0.5);
+      fill: index.$color_white_50;
     }
   }
 }
@@ -30,30 +30,30 @@
   a:hover {
     color: black !important;
   }
-  >span:last-child{
-    color: rgba(0, 0, 0, 0.5) !important;
-    >svg{
-      fill: rgba(0, 0, 0, 0.5);
+  > span:last-child {
+    color: index.$color_black_50 !important;
+    > svg {
+      fill: index.$color_black_50;
     }
   }
 }
 .App-dark {
   background: index.$color_bg;
-  color: white !important;
+  color: index.$color_white !important;
   a,
   a:hover {
-    color: white !important;
+    color: index.$color_white !important;
   }
 }
 // contact modal-------------------------------------
 .mv-modal {
   @include index.flexColumnCenter;
   background-color: index.$color_bg;
-  border: 1px solid white;
+  border: 1px solid index.$color_white;
   width: 380px;
   min-height: 320px;
   padding: 15px !important;
-  color: white !important;
+  color: index.$color_white !important;
   position: relative;
   border-radius: 10px;
   box-shadow: 0 3px 6px -4px rgba(255, 255, 255, 0.12),
@@ -74,13 +74,13 @@
     @include index.flexCenter;
     width: 100%;
     height: 50px !important;
-    color: white !important;
+    color: index.$color_white !important;
     margin-bottom: 20px;
     position: relative;
     border-radius: 10px !important;
-    border: 1px solid white !important;
+    border: 1px solid index.$color_white !important;
     &:hover {
-      background: white !important;
+      background: index.$color_white !important;
       color: index.$color_bg !important;
       transition-duration: 0.5s;
       transition: background 0.5s;
@@ -92,14 +92,14 @@
       position: absolute;
       width: 25px;
       height: 25px;
-      fill: white;
+      fill: index.$color_white;
       left: 15px;
     }
   }
 }
 
 .mv-modal-light {
-  background-color: white;
+  background-color: index.$color_white;
   border: 1px solid index.$color_bg;
   color: index.$color_bg !important;
   box-shadow: 0 3px 6px -4px rgba(255, 255, 255, 0.12),
@@ -110,9 +110,9 @@
     border: 1px solid index.$color_bg !important;
     &:hover {
       background: index.$color_bg !important;
-      color: white !important;
+      color: index.$color_white !important;
       svg {
-        fill: white !important;
+        fill: index.$color_white !important;
       }
     }
     svg {

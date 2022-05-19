@@ -11,12 +11,12 @@
   padding: 0 40px;
 }
 .Header-light {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px index.$color_black_30;
   path {
     fill: black;
   }
   button {
-    border: 1px solid rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid index.$color_black_50 !important;
   }
 }
 
@@ -41,31 +41,40 @@
 }
 
 // links--------------------------------------------------------
-.header-links{
-  a{
+.header-links {
+  a {
     margin: 0 30px;
     display: inline-block;
   }
-  a:hover{
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, .5);
-    transition: .2s;
+  a:hover {
+    // text-shadow: 1px 1px 5px index.$color_white_50;
+    transition: 0.2s;
   }
+  // a::after {
+  //   content: "";
+  //   display: block;
+  //   width: 0;
+  //   height: 1px;
+  //   background: index.$color_white;
+  //   transition: width 0.3s;
+  // }
+  // a:hover::after {
+  //   width: 100%;
+  // }
+}
+.header-links-light {
   a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 1px;
-    background: white;
-    transition: width 0.3s;
-  }
-  a:hover::after {
-    width: 100%;
+    background: index.$color_black;
   }
 }
-.header-links-light{
-  a::after {
-    background: rgb(0, 0, 0);
-  }
+
+.header-link-active{
+  text-shadow: 0 0 25px index.$color_white !important;
+  transition: text-shadow 1s;
+}
+#header-link-active-light{
+  text-shadow: 0 0 25px index.$color_black !important;
+  transition: text-shadow 1s;
 }
 
 // theme changer------------------------------------------------
@@ -73,13 +82,13 @@
   width: 50px;
   height: 50px !important;
   border-radius: 50% !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid index.$color_white_50 !important;
   svg {
     transform: rotate(-110deg) !important;
   }
 }
 .header-theme-changer-light {
-  border: 1px solid rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid index.$color_black_50 !important;
 }
 .header-logo-wrapper-light > span {
   animation-name: headerTitleLight !important;
@@ -108,13 +117,13 @@
     text-shadow: none;
   }
   25% {
-    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 15px index.$color_black_30;
   }
   50% {
-    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 15px index.$color_tertiary;
   }
   75% {
-    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 15px index.$color_black_30;
   }
   100% {
     text-shadow: none;

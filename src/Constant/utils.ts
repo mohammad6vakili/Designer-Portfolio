@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Home from "../Pages/Home/Home";
-import CV from "../Pages/CV/CV";
+import Skills from "../Pages/Skills/Skills";
 import Projects from "../Pages/Projects/Projects";
 import About from "../Pages/About/About";
 import Single from "../Pages/Single/Single";
@@ -18,9 +18,9 @@ export const Routings: RoutesTypes[] = [
     Component: Home,
   },
   {
-    Path: "/cv",
-    Title: "CV",
-    Component: CV,
+    Path: "/skills",
+    Title: "Skills",
+    Component: Skills,
   },
   {
     Path: "/projects",

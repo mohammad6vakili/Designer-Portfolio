@@ -1,0 +1,23 @@
+@use "../../index";
+.skills {
+  width: 100%;
+  height: 100%;
+  > div:nth-child(1) {
+    font-size: 26px;
+    margin-bottom: 50px;
+    color: index.$color_white;
+    @include index.loadingTextsAnimation(0.5s);
+  }
+  > div > div {
+    margin: 20px 0;
+  }
+  > div:nth-child(2) span {
+    color: white !important;
+  }
+}
+
+.skills-light {
+  > div:nth-child(1) {
+    color: index.$color_black;
+  }
+}

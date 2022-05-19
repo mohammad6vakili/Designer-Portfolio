@@ -6,11 +6,13 @@
   > div {
     width: 50%;
     > img {
+      @include index.loadingTextsAnimation(1s);
       width: 85%;
     }
   }
   > div:nth-child(1) {
     @include index.flexColumnCenter;
+    @include index.loadingTextsAnimation(1s);
     align-items: flex-start !important;
     > div:nth-child(1) {
       font-size: 52px;
@@ -26,7 +28,7 @@
       margin-right: 20px;
       font-weight: 100;
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.5);
+      color: index.$color_white_50;
     }
     > div {
       margin-bottom: 50px;
@@ -40,7 +42,7 @@
       color: rgba(0, 0, 0, 0.8);
     }
     > div:nth-child(3) > span {
-      color: rgba(0, 0, 0, 0.5);
+      color: index.$color_black_50;
     }
   }
 }
