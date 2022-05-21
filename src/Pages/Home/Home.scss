@@ -3,6 +3,7 @@
   width: 100%;
   padding-bottom: 20px;
   @include index.flexCenter;
+  scrollbar-width: none !important;
   > div {
     width: 50%;
     > img {
@@ -18,8 +19,10 @@
       font-size: 52px;
     }
     > div:nth-child(2) {
-      font-size: 20px;
-      color: rgba(255, 255, 255, 0.8);
+      color: index.$color_white_70;
+      font-size: 16px;
+      line-height: 2;
+      font-weight: 100 !important;
     }
     > div:nth-child(3) {
       @include index.flexCenter;
@@ -36,6 +39,10 @@
   }
 }
 
+.home::-webkit-scrollbar{
+  display: none !important;
+}
+
 .home-light {
   > div:nth-child(1) {
     > div:nth-child(2) {
@@ -45,4 +52,12 @@
       color: index.$color_black_50;
     }
   }
+  .highlited {
+    color: index.$color_black;
+    text-shadow: 1px 1px 5px index.$color_black_30;
+  }
+}
+
+.highlited{
+  @include index.highlitedText;
 }

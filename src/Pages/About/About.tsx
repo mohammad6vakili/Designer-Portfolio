@@ -7,7 +7,7 @@ const About = () => {
   const theme: any = useSelector((state: any) => state.Reducer.theme);
   return (
     <div className={`about ${theme === "light" ? "about-light" : ""}`}>
-      <div>A few lines about me ...</div>
+      <div></div>
       <div>
         <div>
           <div>
@@ -29,9 +29,9 @@ const About = () => {
           </div>
           <div>
             I also have experience in designing
-            <span className="highlited">ui kits</span>,{" "}
-            <span className="highlited">logos</span>,{" "}
-            <span className="highlited">banner ads</span>, etc.
+            <span className="highlited">Ui Kits Design</span>,{" "}
+            <span className="highlited">Logo Design</span>,{" "}
+            <span className="highlited">Ads banner Design</span>, etc.
           </div>
           <div>
             But my main focus is on{" "}

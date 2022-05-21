@@ -31,6 +31,13 @@ $color_black_30: rgba(0, 0, 0, 0.3);
   animation-duration: $duration;
 }
 
+@mixin highlitedText {
+  color: $color_white;
+  margin: 0 5px;
+  font-size: 18px !important;
+  text-shadow: 1px 1px 5px $color_white_50;
+}
+
 * {
   padding: 0;
   margin: 0;

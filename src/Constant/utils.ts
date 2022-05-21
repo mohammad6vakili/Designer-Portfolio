@@ -11,6 +11,11 @@ interface RoutesTypes {
   Component: FC;
 }
 
+interface SkillsTypes {
+  label: string;
+  value: number;
+}
+
 export const Routings: RoutesTypes[] = [
   {
     Path: "/",
@@ -36,5 +41,56 @@ export const Routings: RoutesTypes[] = [
     Path: "/view/:id",
     Title: "View Design",
     Component: Single,
+  },
+];
+
+export const SkillsData: SkillsTypes[] = [
+  {
+    label: "UX Design",
+    value: 95,
+  },
+  {
+    label: "UI Design",
+    value: 100,
+  },
+  {
+    label: "Prototyping and wireframing",
+    value: 90,
+  },
+  {
+    label: "Visual design",
+    value: 95,
+  },
+  {
+    label: "User research",
+    value: 100,
+  },
+  {
+    label: "Agile",
+    value: 85,
+  },
+  {
+    label: "Information architecture (IA)",
+    value: 90,
+  },
+  {
+    label: "UX writing",
+    value: 90,
+  },
+  {
+    label: "UI Components",
+    value: 95,
+  },
+  {
+    label: "Logo Design",
+    value: 85,
+  },
+  {
+    label: "Ads banner",
+    value: 100,
+  },
+  {
+    label: "English",
+    value: 80,
   },
 ];

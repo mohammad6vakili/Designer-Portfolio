@@ -9,12 +9,22 @@
   -webkit-transition: background-color 340ms linear;
   -ms-transition: background-color 340ms linear;
   transition: background-color 340ms linear;
-  > span:last-child {
-    position: absolute;
-    left: 40px;
-    bottom: 10px;
+  scrollbar-width: none !important;
+  &::-webkit-scrollbar{
+    display: none !important;
+  }
+  > div:last-child {
+    width: 100%;
+    background-color: index.$color_bg;
     color: index.$color_white_50;
-    @include index.flexCenter;
+    position: absolute;
+    height: 40px;
+    left: 0;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
     > svg {
       width: 20px;
       height: 20px;
@@ -30,7 +40,8 @@
   a:hover {
     color: black !important;
   }
-  > span:last-child {
+  > div:last-child {
+    background-color: index.$color_white !important;
     color: index.$color_black_50 !important;
     > svg {
       fill: index.$color_black_50;

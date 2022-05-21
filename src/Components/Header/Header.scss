@@ -5,13 +5,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: index.$color_bg;
   position: fixed;
   top: 0;
   left: 0;
   padding: 0 40px;
 }
 .Header-light {
-  box-shadow: 0 1px 5px index.$color_black_30;
+  box-shadow: 0 1px 5px index.$color_black_50;
+  background-color: index.$color_white;
   path {
     fill: black;
   }
@@ -73,7 +75,7 @@
   transition: text-shadow 1s;
 }
 #header-link-active-light{
-  text-shadow: 0 0 25px index.$color_black !important;
+  text-shadow: 0 0 25px index.$color_tertiary !important;
   transition: text-shadow 1s;
 }
 

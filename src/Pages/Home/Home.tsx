@@ -10,8 +10,11 @@ const Home = () => {
       <div>
         <div>Hi I'm Parisa , an Unordinary Ui/Ux designer</div>
         <div>
-          My process focuses on Web Applications design and Mobile Applications design . You can see my portfolio and resume on this site.
-          You can also see ways to contact me in contact section.
+          My process focuses on{" "}
+          <span className="highlited">Web Applications design</span> and{" "}
+          <span className="highlited">Mobile Applications design</span> . You
+          can see my portfolio and resume on this site. You can also see ways to
+          contact me in contact section.
         </div>
         <div>
           <span>Design</span>

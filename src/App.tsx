@@ -16,9 +16,9 @@ const App = () => {
           <Route path={route.Path} key={index} element={<route.Component />} />
         ))}
       </Routes>
-      <span>
+      <div>
         <EmailIcon /> parisa6derakhshan@gmail.com
-      </span>
+      </div>
     </div>
   );
 };
